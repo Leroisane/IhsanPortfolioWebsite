@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#tentang {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#tentang img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 60px;
+    margin-top: 50px;
+    background-color: lightgrey;
+    clip-path: circle(50% at 50% 50%);
+}
+
+.tentang-content {
+    max-width: 600px;
+    text-align: justify;
+    font-size: 18px;
+}
+
+#tentang h2 {
+    font-size: 28px;
+    text-align: center;
+}
+
+#proyek {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#proyek h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.proyek-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.proyek-container img {
+    width: 280px;
+    border-radius: 8px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    #tentang {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #tentang img {
+        margin: 0 0 20px 0;
+    }
+
+    .tentang-content {
+        text-align: center;
+    }
+
+    .proyek-container img {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.logos {
+    overflow: hidden;
+    background: white;
+    white-space: nowrap;
+    position: relative;
+    padding: 20px 0;
+}
+
+.logos:before,
+.logos:after {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    content: '';
+    z-index: 2;
+}
+
+.logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logos:hover .logos-slide {
+    animation-play-state: paused;
+}
+
+.logos-slide {
+    display: inline-block;
+    animation: 32s slide infinite linear;
+}
+
+.logos-slide img {
+    height: 400px;
+    margin: 0 8px;
+}
+
+#kontak {
+    background: #f8f8f8;
+    padding: 50px 0;
+}
+
+#kontak ul {
+    list-style: none;
+}
+
+#kontak ul li {
+    margin: 10px 0;
+}
+
+#kontak ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
