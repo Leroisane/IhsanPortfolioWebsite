@@ -47,12 +47,13 @@ nav ul li a {
 #tentang img {
     width: 200px;
     height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
+    object-fit: contain;
+    /* border-radius: 50%; */
     margin-right: 60px;
     margin-top: 50px;
     background-color: lightgrey;
     clip-path: circle(50% at 50% 50%);
+    align-content: center;
 }
 
 .tentang-content {
@@ -90,14 +91,20 @@ nav ul li a {
 }
 
 /* Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 920px) {
     #tentang {
         flex-direction: column;
+        align-content: center;
         text-align: center;
     }
 
     #tentang img {
-        margin: 0 0 20px 0;
+        /* width: 200px;
+        height: 200px;
+        object-fit: contain; */
+        /* border-radius: 50%; */
+        margin-right: 0px;
+        margin-top: 0px;
     }
 
     .tentang-content {
